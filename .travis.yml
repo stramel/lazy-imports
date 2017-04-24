@@ -12,7 +12,7 @@ addons:
       - google-chrome
     packages:
       - google-chrome-beta
-install
+install:
   - npm install -g bower polymer-cli@next
   - polymer install --variants
 before_script:
