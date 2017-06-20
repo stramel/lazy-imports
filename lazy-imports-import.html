@@ -33,9 +33,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
      */
     Polymer.__importLazyGroup = function(fromElement, group, options) {
       var groupAttribute = group ? '[group=' + group + ']' : ':not([group])';
-      var query = 'link' +groupAttribute+ '[rel=\'lazy-import\'][href]:not([href=\'\'])';
+      var query =
+        'link' +groupAttribute+ '[rel=\'lazy-import\'][href]:not([href=\'\'])';
 
-      var links = Polymer.DomModule.import(fromElement.localName).querySelectorAll(query);
+      var links =
+        Polymer.DomModule.import(fromElement.localName).querySelectorAll(query);
 
       return Promise.all(Array.from(links).map(function(link) {
         var promise;
